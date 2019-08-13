@@ -1,6 +1,6 @@
 "use strict";
 
-import React, { Component } from "react";
+import React from "react";
 import { View, PanResponder } from "react-native";
 
 export const swipeDirections = {
@@ -31,7 +31,7 @@ function isValidSwipe(
   );
 }
 
-class GestureRecognizer extends Component {
+class GestureRecognizerView extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
     this.swipeConfig = Object.assign(swipeConfig, props.config);
@@ -137,4 +137,4 @@ class GestureRecognizer extends Component {
   }
 }
 
-export default GestureRecognizer;
+export default GestureRecognizerView;
