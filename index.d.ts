@@ -3,7 +3,7 @@
 // TypeScript Version: 3.5
 
 import { PureComponent } from 'react';
-import { PanResponderGestureState } from 'react-native';
+import { PanResponderGestureState, ViewProps } from 'react-native';
 
 export interface SwipeDirections {
   SWIPE_UP: 'SWIPE_UP';
@@ -20,7 +20,7 @@ export interface GestureRecognizerConfig {
   gestureIsClickThreshold?: number;
 }
 
-export interface GestureRecognizerProps {
+export interface GestureRecognizerProps extends ViewProps {
   config?: GestureRecognizerConfig;
   onSwipe?: (gestureName: string, state: PanResponderGestureState) => void;
   onSwipeUp?: (state: PanResponderGestureState) => void;
